@@ -2,7 +2,7 @@
 
 **[portfolio-eduardo-zuri.vercel.app](https://portfolio-eduardo-zuri.vercel.app)**
 
-Portfolio pessoal desenvolvido com HTML, CSS e JavaScript puro, inspirado no estilo visual do Resend.com.
+Portfolio pessoal desenvolvido com HTML, CSS e JavaScript puro.
 
 ## Preview
 
@@ -44,10 +44,6 @@ Portfolio pessoal desenvolvido com HTML, CSS e JavaScript puro, inspirado no est
 ```
 
 ## Contato
-
-- GitHub: [github.com/eduardo-zuri](https://github.com/eduardo-zuri)
-- LinkedIn: [linkedin.com/in/eduardozuri](https://www.linkedin.com/in/eduardozuri/)
-- Email: duduzuri10@gmail.com
 
 - GitHub: [github.com/eduardo-zuri](https://github.com/eduardo-zuri)
 - LinkedIn: [linkedin.com/in/eduardozuri](https://www.linkedin.com/in/eduardozuri/)
