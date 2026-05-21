@@ -1,0 +1,85 @@
+/* ============================================
+   COMPONENTS — refined (monochrome)
+   Buttons, tags
+   ============================================ */
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.65rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  transition: transform var(--transition-fast), box-shadow var(--transition-normal),
+              background var(--transition-normal), color var(--transition-normal),
+              border-color var(--transition-normal);
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  isolation: isolate;
+}
+
+.btn--sm {
+  padding: 0.55rem 1.05rem;
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-widest);
+}
+
+.btn--primary {
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+  box-shadow: var(--shadow-btn);
+  --mx: 0px;
+  --my: 0px;
+  transform: translate(var(--mx), var(--my));
+}
+
+.btn--primary:hover {
+  transform: translate(var(--mx), calc(var(--my) - 1px));
+  box-shadow: var(--shadow-btn), 0 12px 24px -10px rgba(244, 243, 238, 0.35);
+}
+
+.btn--primary:active { transform: scale(0.98); }
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-hover);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-text-primary);
+  background: rgba(244, 243, 238, 0.03);
+  transform: translateY(-1px);
+}
+
+.btn--outline:active { transform: scale(0.98); }
+
+.btn svg { transition: transform var(--transition-fast); }
+.btn:hover svg { transform: translateX(2px); }
+
+/* --- Tags --- */
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  background: transparent;
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.tag:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduardo Zuri - Portfólio</title>
+  <meta name="description" content="Eduardo Zuri — engenharia de dados, machine learning, cloud.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="#">
+        <span class="nav__logo-mark">EZ</span>
+        <span class="nav__logo-sep">/</span>
+        <span class="nav__logo-text">portfolio</span>
+      </a>
+      <nav class="nav__links" id="nav-links">
+        <a href="#about" class="nav__link" data-num="01">Sobre</a>
+        <a href="#stack" class="nav__link" data-num="02">Stack</a>
+        <a href="#work" class="nav__link" data-num="03">Trabalho</a>
+        <a href="#contact" class="nav__link" data-num="04">Contato</a>
+        <span class="nav__link--accent">Curitiba, PR</span>
+      </nav>
+      <button class="nav__hamburger" id="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__content container">
+        <div class="hero__text" data-animate>
+          <h1 class="hero__name">
+            <span class="hero__name-first">Eduardo</span>
+            <span class="hero__name-last">Zuri<span class="hero__name-dot">.</span></span>
+          </h1>
+          <p class="hero__role">
+            <span class="hero__role-bracket">&#91;</span>
+            <span class="hero__role-text" id="typed-role"></span><span class="hero__cursor">_</span>
+            <span class="hero__role-bracket">&#93;</span>
+          </p>
+          <p class="hero__bio">Estudante de <strong>Ciência da Computação</strong> no IFPR, com foco em desenvolvimento de software, infraestrutura de TI e suporte técnico. Python, C/C++, JavaScript, React, SQL, redes e virtualização.</p>
+          <dl class="hero__meta">
+            <div class="meta-row">
+              <dt>LOC</dt>
+              <dd>Curitiba — BR</dd>
+            </div>
+            <div class="meta-row">
+              <dt>FOCUS</dt>
+              <dd>Data · Dev · Infrastructure</dd>
+            </div>
+            <div class="meta-row">
+              <dt>EXP</dt>
+              <dd><span class="counter" data-count="2">0</span> anos codando</dd>
+            </div>
+            <div class="meta-row">
+              <dt>STACK</dt>
+              <dd><span class="counter" data-count="20">0</span> tecnologias</dd>
+            </div>
+          </dl>
+          <div class="hero__cta">
+            <a href="#work" class="btn btn--primary">
+              Ver projetos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="assets/cv-eduardo-zuri.pdf" download class="btn btn--outline">
+              Baixe meu CV
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__cube" id="cube-container">
+          <!-- Three.js canvas injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MARQUEE TICKER ========== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-strip__track">
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/python/f4f3ee" alt="" loading="lazy">Python</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/cplusplus/f4f3ee" alt="" loading="lazy">C++</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/javascript/f4f3ee" alt="" loading="lazy">JavaScript</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/react/f4f3ee" alt="" loading="lazy">React</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/nodedotjs/f4f3ee" alt="" loading="lazy">Node.js</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/mysql/f4f3ee" alt="" loading="lazy">MySQL</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/opencv/f4f3ee" alt="" loading="lazy">OpenCV</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/numpy/f4f3ee" alt="" loading="lazy">NumPy</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/linux/f4f3ee" alt="" loading="lazy">Linux</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/docker/f4f3ee" alt="" loading="lazy">Docker</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="assets/icons/azure.svg" alt="" loading="lazy">Azure</span>
+        <span class="marquee-strip__item"><img class="marquee-strip__icon" src="https://cdn.simpleicons.org/git/f4f3ee" alt="" loading="lazy">Git</span>
+      </div>
+    </div>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">01 / about</p>
+          <h2 class="section__heading" data-text-reveal>Sobre.</h2>
+        </div>
+        <div class="about__grid">
+          <aside class="about__sidebar" data-animate>
+            <dl class="meta-block">
+              <div class="meta-row">
+                <dt>NAME</dt>
+                <dd>Eduardo Zuri</dd>
+              </div>
+              <div class="meta-row">
+                <dt>FIELD</dt>
+                <dd>Ciência da Computação</dd>
+              </div>
+              <div class="meta-row">
+                <dt>SINCE</dt>
+                <dd>2024</dd>
+              </div>
+              <div class="meta-row">
+                <dt>BASED</dt>
+                <dd>Curitiba, BR</dd>
+              </div>
+              <div class="meta-row">
+                <dt>LANG</dt>
+                <dd>pt-BR · en-US</dd>
+              </div>
+            </dl>
+          </aside>
+          <div class="about__body" data-line-reveal>
+            <p class="about__pull-quote">"Tudo começa pela lógica."</p>
+            <p>Estudante de Ciência da Computação no <strong>IFPR, Campus Pinhais</strong>, no quinto semestre de formação. Atuo em três frentes: desenvolvimento de software, infraestrutura de TI e suporte técnico. Possuo conhecimento sólido no Modelo OSI, protocolos de rede (IP, DNS, DHCP, Gateways) e desenvoltura para atendimento ao cliente e resolução de problemas.</p>
+            <p>Em desenvolvimento, trabalho com <strong>Python</strong>, OpenCV, NumPy, <strong>C/C++</strong>, JavaScript e React, com experiência na construção de aplicações full stack e gestão de bancos de dados relacionais com <strong>MySQL</strong> e SQL Server. Em infraestrutura, domino virtualização com Hyper-V e Azure, administração de sistemas Linux e Windows Server, além de fundamentos de segurança da informação com Firewalls e VPNs.</p>
+            <p>Tenho proficiência no Pacote Office com ênfase em análises via Excel, conhecimento em metodologia ágil (Scrum/Jira), versionamento com Git/GitHub e integração com APIs REST. Inglês intermediário (B1) para leitura, escrita e conversação. Em todos os projetos, priorizo arquitetura limpa, documentação clara e soluções orientadas a resultado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STACK ========== -->
+    <section class="stack section" id="stack">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">02 / stack</p>
+          <h2 class="section__heading" data-text-reveal>Stack &amp; Tools.</h2>
+        </div>
+        <div class="stack__grid" data-animate>
+          <!-- Linguagens -->
+          <article class="tech" style="--i:1"><img class="tech__icon" src="https://cdn.simpleicons.org/python/f4f3ee" alt="" loading="lazy"><span class="tech__num">01</span><span class="tech__name">Python</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:2"><img class="tech__icon" src="https://cdn.simpleicons.org/c/f4f3ee" alt="" loading="lazy"><span class="tech__num">02</span><span class="tech__name">C</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:3"><img class="tech__icon" src="https://cdn.simpleicons.org/cplusplus/f4f3ee" alt="" loading="lazy"><span class="tech__num">03</span><span class="tech__name">C++</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:4"><img class="tech__icon" src="https://cdn.simpleicons.org/javascript/f4f3ee" alt="" loading="lazy"><span class="tech__num">04</span><span class="tech__name">JavaScript</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:5"><img class="tech__icon" src="https://cdn.simpleicons.org/openjdk/f4f3ee" alt="" loading="lazy"><span class="tech__num">05</span><span class="tech__name">Java</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:6"><img class="tech__icon" src="https://cdn.simpleicons.org/html5/f4f3ee" alt="" loading="lazy"><span class="tech__num">06</span><span class="tech__name">HTML</span><span class="tech__cat">lang</span></article>
+          <article class="tech" style="--i:7"><img class="tech__icon" src="https://cdn.simpleicons.org/css/f4f3ee" alt="" loading="lazy"><span class="tech__num">07</span><span class="tech__name">CSS</span><span class="tech__cat">lang</span></article>
+          <!-- Web / Frameworks -->
+          <article class="tech" style="--i:8"><img class="tech__icon" src="https://cdn.simpleicons.org/react/f4f3ee" alt="" loading="lazy"><span class="tech__num">08</span><span class="tech__name">React</span><span class="tech__cat">web</span></article>
+          <article class="tech" style="--i:9"><img class="tech__icon" src="https://cdn.simpleicons.org/nodedotjs/f4f3ee" alt="" loading="lazy"><span class="tech__num">09</span><span class="tech__name">Node.js</span><span class="tech__cat">web</span></article>
+          <article class="tech" style="--i:10"><img class="tech__icon" src="https://cdn.simpleicons.org/express/f4f3ee" alt="" loading="lazy"><span class="tech__num">10</span><span class="tech__name">Express</span><span class="tech__cat">web</span></article>
+          <!-- Dados -->
+          <article class="tech" style="--i:11"><img class="tech__icon" src="https://cdn.simpleicons.org/mysql/f4f3ee" alt="" loading="lazy"><span class="tech__num">11</span><span class="tech__name">MySQL</span><span class="tech__cat">data</span></article>
+          <article class="tech" style="--i:12"><img class="tech__icon" src="https://cdn.simpleicons.org/opencv/f4f3ee" alt="" loading="lazy"><span class="tech__num">12</span><span class="tech__name">OpenCV</span><span class="tech__cat">data</span></article>
+          <article class="tech" style="--i:13"><img class="tech__icon" src="https://cdn.simpleicons.org/numpy/f4f3ee" alt="" loading="lazy"><span class="tech__num">13</span><span class="tech__name">NumPy</span><span class="tech__cat">data</span></article>
+          <!-- Infra / Tools -->
+          <article class="tech" style="--i:14"><img class="tech__icon" src="https://cdn.simpleicons.org/git/f4f3ee" alt="" loading="lazy"><span class="tech__num">14</span><span class="tech__name">Git</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:15"><img class="tech__icon" src="https://cdn.simpleicons.org/github/f4f3ee" alt="" loading="lazy"><span class="tech__num">15</span><span class="tech__name">GitHub</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:16"><img class="tech__icon" src="https://cdn.simpleicons.org/linux/f4f3ee" alt="" loading="lazy"><span class="tech__num">16</span><span class="tech__name">Linux</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:17"><img class="tech__icon" src="https://cdn.simpleicons.org/docker/f4f3ee" alt="" loading="lazy"><span class="tech__num">17</span><span class="tech__name">Docker</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:18"><img class="tech__icon" src="https://cdn.simpleicons.org/virtualbox/f4f3ee" alt="" loading="lazy"><span class="tech__num">18</span><span class="tech__name">VirtualBox</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:19"><img class="tech__icon" src="assets/icons/azure.svg" alt="" loading="lazy"><span class="tech__num">19</span><span class="tech__name">Azure</span><span class="tech__cat">infra</span></article>
+          <article class="tech" style="--i:20"><img class="tech__icon" src="https://cdn.simpleicons.org/jira/f4f3ee" alt="" loading="lazy"><span class="tech__num">20</span><span class="tech__name">Jira</span><span class="tech__cat">tools</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="work section" id="work">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">03 / work</p>
+          <h2 class="section__heading" data-text-reveal>Projetos.</h2>
+        </div>
+
+        <div class="work__list">
+
+          <!-- Project 01: EZSFLIX -->
+          <article class="work-item" data-expanded="false">
+            <button class="work-item__header" type="button" aria-expanded="false">
+              <span class="work-item__num">01</span>
+              <div class="work-item__title-block">
+                <h3 class="work-item__title">EZSFLIX</h3>
+                <p class="work-item__caption">Portal fullstack de filmes &amp; séries — auth, favoritos, busca</p>
+              </div>
+              <div class="work-item__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <span class="work-item__year">2025</span>
+              <span class="work-item__toggle" aria-hidden="true">
+                <span class="work-item__toggle-bar"></span>
+                <span class="work-item__toggle-bar work-item__toggle-bar--v"></span>
+              </span>
+            </button>
+            <div class="work-item__body">
+              <div class="work-item__body-inner">
+                <div class="work-item__preview">
+                  <div class="browser-frame">
+                    <div class="browser-frame__bar">
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <div class="browser-frame__url">ezsflix.app / home</div>
+                    </div>
+                    <div class="browser-frame__viewport">
+                      <div class="browser-frame__nav">
+                        <span>EZSFLIX</span>
+                        <span>Filmes</span>
+                        <span>Séries</span>
+                        <span>Favoritos</span>
+                      </div>
+                      <div class="browser-frame__grid">
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                        <div class="poster"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work-item__details">
+                  <p class="work-item__desc">Portal completo que integra a API do TMDB, com autenticação JWT, sistema de favoritos, avaliações e busca em tempo real. Frontend em React, backend Node/Express, persistência em MySQL.</p>
+                  <dl class="work-item__specs">
+                    <div><dt>STACK</dt><dd>React · Node · Express · MySQL · JWT · TMDB API</dd></div>
+                    <div><dt>ROLE</dt><dd>Fullstack — frontend, API, schema</dd></div>
+                    <div><dt>STATUS</dt><dd>shipped · open source</dd></div>
+                  </dl>
+                  <ul class="work-item__features">
+                    <li>Autenticação JWT com refresh token rotation</li>
+                    <li>Busca debounced em tempo real contra TMDB</li>
+                    <li>Sistema de favoritos &amp; avaliações persistido em MySQL</li>
+                    <li>Schema relacional otimizado para queries de descoberta</li>
+                  </ul>
+                  <div class="work-item__cta">
+                    <a class="btn btn--outline btn--sm" href="https://github.com/eduardo-zuri/EZSFLIX" target="_blank" rel="noopener">
+                      GitHub
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: Digit-Guess -->
+          <article class="work-item" data-expanded="false">
+            <button class="work-item__header" type="button" aria-expanded="false">
+              <span class="work-item__num">02</span>
+              <div class="work-item__title-block">
+                <h3 class="work-item__title">Digit-Guess</h3>
+                <p class="work-item__caption">MLP do zero em JS puro — MNIST · 60k imagens</p>
+              </div>
+              <div class="work-item__tags">
+                <span class="tag">JS</span>
+                <span class="tag">NN</span>
+                <span class="tag">Canvas</span>
+              </div>
+              <span class="work-item__year">2024</span>
+              <span class="work-item__toggle" aria-hidden="true">
+                <span class="work-item__toggle-bar"></span>
+                <span class="work-item__toggle-bar work-item__toggle-bar--v"></span>
+              </span>
+            </button>
+            <div class="work-item__body">
+              <div class="work-item__body-inner">
+                <div class="work-item__preview">
+                  <div class="browser-frame">
+                    <div class="browser-frame__bar">
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <div class="browser-frame__url">digit-guess / draw</div>
+                    </div>
+                    <div class="browser-frame__viewport">
+                      <div class="digit-mock">
+                        <div class="digit-mock__canvas">
+                          <!-- Pixel art "2" in 8x8 grid -->
+                          <div class="digit-mock__pixel" style="grid-area:2/3"></div>
+                          <div class="digit-mock__pixel" style="grid-area:2/4"></div>
+                          <div class="digit-mock__pixel" style="grid-area:2/5"></div>
+                          <div class="digit-mock__pixel" style="grid-area:3/2"></div>
+                          <div class="digit-mock__pixel" style="grid-area:3/5"></div>
+                          <div class="digit-mock__pixel" style="grid-area:3/6"></div>
+                          <div class="digit-mock__pixel" style="grid-area:4/5"></div>
+                          <div class="digit-mock__pixel" style="grid-area:4/6"></div>
+                          <div class="digit-mock__pixel" style="grid-area:5/4"></div>
+                          <div class="digit-mock__pixel" style="grid-area:5/5"></div>
+                          <div class="digit-mock__pixel" style="grid-area:6/3"></div>
+                          <div class="digit-mock__pixel" style="grid-area:6/4"></div>
+                          <div class="digit-mock__pixel" style="grid-area:7/2"></div>
+                          <div class="digit-mock__pixel" style="grid-area:7/3"></div>
+                          <div class="digit-mock__pixel" style="grid-area:8/2"></div>
+                          <div class="digit-mock__pixel" style="grid-area:8/3"></div>
+                          <div class="digit-mock__pixel" style="grid-area:8/4"></div>
+                          <div class="digit-mock__pixel" style="grid-area:8/5"></div>
+                          <div class="digit-mock__pixel" style="grid-area:8/6"></div>
+                        </div>
+                        <div class="digit-mock__output">
+                          <div class="digit-mock__row"><span>0</span><div class="bar"><i style="width:2%"></i></div><em>0.02</em></div>
+                          <div class="digit-mock__row"><span>1</span><div class="bar"><i style="width:3%"></i></div><em>0.03</em></div>
+                          <div class="digit-mock__row digit-mock__row--active"><span>2</span><div class="bar"><i style="width:96%"></i></div><em>0.96</em></div>
+                          <div class="digit-mock__row"><span>3</span><div class="bar"><i style="width:7%"></i></div><em>0.07</em></div>
+                          <div class="digit-mock__row"><span>4</span><div class="bar"><i style="width:1%"></i></div><em>0.01</em></div>
+                          <div class="digit-mock__row"><span>5</span><div class="bar"><i style="width:4%"></i></div><em>0.04</em></div>
+                          <div class="digit-mock__row"><span>6</span><div class="bar"><i style="width:3%"></i></div><em>0.03</em></div>
+                          <div class="digit-mock__row"><span>7</span><div class="bar"><i style="width:5%"></i></div><em>0.05</em></div>
+                          <div class="digit-mock__row"><span>8</span><div class="bar"><i style="width:2%"></i></div><em>0.02</em></div>
+                          <div class="digit-mock__row"><span>9</span><div class="bar"><i style="width:1%"></i></div><em>0.01</em></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work-item__details">
+                  <p class="work-item__desc">MLP implementada do zero em JavaScript puro — sem libs de ML. Reconhece dígitos manuscritos em tempo real, treinada com as 60.000 imagens do MNIST. Forward/backward propagation, ReLU, softmax, tudo escrito à mão.</p>
+                  <dl class="work-item__specs">
+                    <div><dt>STACK</dt><dd>Vanilla JS · Canvas · MNIST</dd></div>
+                    <div><dt>ARCH</dt><dd>784 → 128 → 64 → 10 (ReLU + softmax)</dd></div>
+                    <div><dt>ACC</dt><dd>~97% no test set</dd></div>
+                  </dl>
+                  <ul class="work-item__features">
+                    <li>Forward &amp; backward pass implementados manualmente</li>
+                    <li>Canvas 28×28 desenhável em tempo real</li>
+                    <li>Distribuição de probabilidade visualizada por dígito</li>
+                    <li>Pesos serializados em JSON pós-treino</li>
+                  </ul>
+                  <div class="work-item__cta">
+                    <a class="btn btn--outline btn--sm" href="https://github.com/eduardo-zuri/Digit-Guess" target="_blank" rel="noopener">
+                      GitHub
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: Árvore Binária -->
+          <article class="work-item" data-expanded="false">
+            <button class="work-item__header" type="button" aria-expanded="false">
+              <span class="work-item__num">03</span>
+              <div class="work-item__title-block">
+                <h3 class="work-item__title">Árvore Binária</h3>
+                <p class="work-item__caption">Visualização interativa de BST · inserção &amp; altura</p>
+              </div>
+              <div class="work-item__tags">
+                <span class="tag">JS</span>
+                <span class="tag">Algoritmos</span>
+                <span class="tag">SVG</span>
+              </div>
+              <span class="work-item__year">2024</span>
+              <span class="work-item__toggle" aria-hidden="true">
+                <span class="work-item__toggle-bar"></span>
+                <span class="work-item__toggle-bar work-item__toggle-bar--v"></span>
+              </span>
+            </button>
+            <div class="work-item__body">
+              <div class="work-item__body-inner">
+                <div class="work-item__preview">
+                  <div class="browser-frame">
+                    <div class="browser-frame__bar">
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <span class="browser-frame__dot"></span>
+                      <div class="browser-frame__url">bst-viz / insert</div>
+                    </div>
+                    <div class="browser-frame__viewport">
+                      <svg class="tree-mock" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g stroke="currentColor" stroke-width="1" fill="none">
+                          <line x1="160" y1="36" x2="90" y2="92"/>
+                          <line x1="160" y1="36" x2="230" y2="92"/>
+                          <line x1="90" y1="92" x2="50" y2="148"/>
+                          <line x1="90" y1="92" x2="130" y2="148"/>
+                          <line x1="230" y1="92" x2="270" y2="148"/>
+                        </g>
+                        <g fill="var(--color-bg-elevated)" stroke="currentColor" stroke-width="1">
+                          <circle cx="160" cy="36" r="18"/>
+                          <circle cx="90" cy="92" r="18"/>
+                          <circle cx="230" cy="92" r="18"/>
+                          <circle cx="50" cy="148" r="18"/>
+                          <circle cx="130" cy="148" r="18"/>
+                          <circle cx="270" cy="148" r="18"/>
+                        </g>
+                        <g fill="currentColor" font-family="Geist Mono, monospace" font-size="12" text-anchor="middle" dominant-baseline="central">
+                          <text x="160" y="36">42</text>
+                          <text x="90" y="92">17</text>
+                          <text x="230" y="92">68</text>
+                          <text x="50" y="148">8</text>
+                          <text x="130" y="148">31</text>
+                          <text x="270" y="148">81</text>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="work-item__details">
+                  <p class="work-item__desc">Ferramenta educacional que visualiza uma árvore binária de busca em tempo real. Permite inserção de nós, inspeção de altura e operações de travessia com animações CSS suaves.</p>
+                  <dl class="work-item__specs">
+                    <div><dt>STACK</dt><dd>Vanilla JS · SVG · CSS transitions</dd></div>
+                    <div><dt>OPS</dt><dd>insert · search · height · traverse</dd></div>
+                    <div><dt>STATUS</dt><dd>shipped · open source</dd></div>
+                  </dl>
+                  <ul class="work-item__features">
+                    <li>Renderização SVG dinâmica que reflow conforme a árvore cresce</li>
+                    <li>Cálculo recursivo de altura em tempo real</li>
+                    <li>Animações CSS para inserção/remoção de nós</li>
+                  </ul>
+                  <div class="work-item__cta">
+                    <a class="btn btn--outline btn--sm" href="https://github.com/eduardo-zuri/ArvoreBinaria" target="_blank" rel="noopener">
+                      GitHub
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <div class="section__head section__head--center">
+          <p class="eyebrow">04 / contact</p>
+          <h2 class="section__heading" data-text-reveal>Vamos trabalhar juntos.</h2>
+        </div>
+        <p class="contact__lead" data-animate>Para um projeto, uma oportunidade ou só um papo sobre tech &mdash;<br>minha caixa de entrada está aberta.</p>
+        <div class="contact__cards" data-animate>
+          <button class="contact__cta" id="copy-email" data-copy="duduzuri10@gmail.com">
+            <span class="contact__cta-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <span class="contact__cta-body">
+              <span class="contact__cta-label">duduzuri10@gmail.com</span>
+              <span class="contact__cta-action">
+                <span class="contact__cta-default">[ click to copy ]</span>
+                <span class="contact__cta-success">[ copied ✓ ]</span>
+              </span>
+            </span>
+          </button>
+          <a class="contact__cta" href="https://github.com/eduardo-zuri" target="_blank" rel="noopener">
+            <span class="contact__cta-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </span>
+            <span class="contact__cta-body">
+              <span class="contact__cta-label">github.com/eduardo-zuri</span>
+              <span class="contact__cta-action">
+                <span class="contact__cta-default">[ abrir perfil ↗ ]</span>
+              </span>
+            </span>
+          </a>
+          <a class="contact__cta" href="https://www.linkedin.com/in/eduardozuri/" target="_blank" rel="noopener">
+            <span class="contact__cta-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </span>
+            <span class="contact__cta-body">
+              <span class="contact__cta-label">linkedin.com/in/eduardozuri</span>
+              <span class="contact__cta-action">
+                <span class="contact__cta-default">[ abrir perfil ↗ ]</span>
+              </span>
+            </span>
+          </a>
+          <a class="contact__cta" href="https://wa.me/5517997131020" target="_blank" rel="noopener">
+            <span class="contact__cta-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <span class="contact__cta-body">
+              <span class="contact__cta-label">(17) 99713-1020</span>
+              <span class="contact__cta-action">
+                <span class="contact__cta-default">[ abrir WhatsApp ↗ ]</span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <p class="footer__copy">© 2026 Eduardo Zuri</p>
+        <p class="footer__sub">Curitiba, BR · pt-BR · en-US</p>
+      </div>
+      <div class="footer__col footer__col--right">
+        <a href="https://github.com/eduardo-zuri" target="_blank" rel="noopener" class="footer__link">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/eduardozuri/" target="_blank" rel="noopener" class="footer__link">LinkedIn ↗</a>
+        <button class="footer__link" id="footer-copy-email" data-copy="duduzuri10@gmail.com">Email</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/cube.js" defer></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor-effect.js"></script>
+</body>
+</html>

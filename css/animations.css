@@ -1,0 +1,179 @@
+/* ============================================
+   ANIMATIONS — refined motion design
+   ============================================ */
+
+/* --- Keyframes --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px #38d68a, 0 0 0 0 rgba(56, 214, 138, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 8px #38d68a, 0 0 0 6px rgba(56, 214, 138, 0);
+  }
+}
+
+@keyframes wordReveal {
+  0% {
+    transform: translateY(110%) rotate(2deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lineReveal {
+  from { opacity: 0; transform: translateY(0.625rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* --- Scroll-triggered animations --- */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+[data-animate].is-visible {
+  animation: fadeInUp 0.85s var(--ease-out-expo) forwards;
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+/* --- Text reveal — words slide up with slight rotation --- */
+[data-text-reveal] .word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  margin-right: 0.25em;
+  padding: 0.05em 0.025em;
+}
+
+[data-text-reveal] .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(110%);
+  transform-origin: bottom left;
+  will-change: opacity, transform;
+}
+
+[data-text-reveal].is-revealed .word {
+  animation: wordReveal 0.9s var(--ease-out-expo) forwards;
+  animation-delay: var(--word-delay, 0ms);
+}
+
+/* --- Line reveal --- */
+[data-line-reveal] p {
+  opacity: 0;
+  transform: translateY(0.625rem);
+  will-change: opacity, transform;
+}
+
+[data-line-reveal].is-revealed p {
+  animation: lineReveal 0.7s var(--ease-out-expo) forwards;
+  animation-delay: var(--line-delay, 0ms);
+}
+
+/* --- Marquee strip — editorial ticker --- */
+.marquee-strip {
+  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.125rem 0;
+  background: var(--color-bg-elevated);
+  position: relative;
+  z-index: 1;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+/* marquee never pauses on hover */
+
+.marquee-strip__track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.marquee-strip__item {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  color: var(--color-text-secondary);
+  letter-spacing: -0.025em;
+  padding: 0 1.5rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.marquee-strip__icon {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.marquee-strip__item::before {
+  content: '·';
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.55em;
+  color: var(--color-text-quaternary);
+  margin-right: 0.6rem;
+  font-weight: normal;
+}
+
+/* Hero stagger */
+.hero__text[data-animate].is-visible { animation-delay: 100ms; }
+
+/* --- Gradient animated background --- */
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: shimmer 4s linear infinite;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-animate] { opacity: 1; transform: none; }
+  .hero__cursor { animation: none; display: none; }
+  [data-text-reveal] .word { opacity: 1; transform: none; }
+  [data-line-reveal] p { opacity: 1; transform: none; }
+  .marquee-strip__track { animation: none; }
+  .skill__dot { transform: scaleX(1) !important; transition: none !important; }
+}
