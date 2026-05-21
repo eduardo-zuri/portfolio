@@ -1,8 +1,6 @@
-/* ============================================
-   THREE.JS RUBIK'S CUBE — refined edition
-   Beveled cubies, premium materials,
-   soft contact shadow, elegant slice rotations
-   ============================================ */
+/* ======================
+   THREE.JS RUBIK'S CUBE 
+   ====================== */
 
 (function () {
   'use strict';
